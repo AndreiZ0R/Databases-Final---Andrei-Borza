@@ -1,0 +1,203 @@
+@import url("../App.css");
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+html {
+  background-color: var(--backgroundColor);
+}
+
+.wrapper {
+  overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+
+  flex-direction: column;
+}
+
+.carder {
+  max-height: 80vh;
+  min-height: 80vh;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: var(--defaultPadding);
+
+  height: 70%;
+  background-color: var(--onBackgroundColor);
+  border-radius: var(--defaultBorderRadius);
+
+  border: 2px solid;
+  animation: anim 3s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    border-color: red;
+    box-shadow: red 0px 5px 15px;
+  }
+
+  25% {
+    box-shadow: aqua 0px 5px 15px;
+    border-color: aqua;
+  }
+
+  50% {
+    border-color: yellowgreen;
+    box-shadow: yellowgreen 0px 5px 15px;
+  }
+
+  75% {
+    box-shadow: blue 0px 5px 15px;
+
+    border-color: blue;
+  }
+
+  100% {
+    box-shadow: red 0px 5px 15px;
+    border-color: red;
+  }
+}
+
+.filterWrapper {
+  width: 95%;
+  padding-top: var(--defaultPadding);
+  padding-bottom: var(--defaultPadding);
+}
+
+.cardWrapper {
+  width: 95%;
+}
+
+.filterBar {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  padding-left: calc(var(--defaultPadding) - 5px);
+  padding-right: calc(var(--defaultPadding) - 5px);
+  padding-top: calc(var(--defaultPadding) - 10px);
+  padding-bottom: calc(var(--defaultPadding) - 10px);
+
+  background-color: var(--onBackgroundColor);
+  border-radius: var(--defaultBorderRadius);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+}
+
+.drop-item {
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+}
+
+.drop-item:hover {
+  background-color: var(--tableRowHoverColor);
+  color: black;
+  cursor: pointer;
+  border-radius: var(--smallBorderRadius);
+  font-family: var(--jetbrainsFont);
+}
+
+.mainBtn {
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  border: none;
+}
+
+.mainBtn:hover {
+  color: var(--primaryColor);
+}
+
+.background {
+  background-color: var(--backgroundColor);
+  padding: var(--extraSmallPadding);
+}
+
+.searchBox {
+  outline: none;
+  border: 2px solid var(--backgroundColor);
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  padding: var(--extraSmallPadding);
+  font-family: var(--jetbrainsFont);
+  border-radius: var(--smallBorderRadius);
+
+  transition: all 200ms ease-in-out;
+}
+
+.searchBox:focus {
+  border: 2px solid var(--primaryColor);
+}
+
+.searchBox::placeholder {
+  font-family: var(--jetbrainsFont);
+}
+
+.filterItem {
+  margin: calc(var(--extraSmallPadding) / 2) var(--extraSmallPadding);
+}
+
+.addBtn {
+  margin: calc(var(--extraSmallPadding) / 2) var(--extraSmallPadding);
+
+  font-family: var(--jetbrainsFont);
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  padding: var(--bulmaPadding);
+  border-radius: var(--extraSmallBorderRadius);
+
+  transition: all 250ms linear;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+.addFont {
+  font-family: var(--jetbrainsFont);
+}
+
+.footerText {
+  font-family: var(--jetbrainsFont);
+  font-size: 1rem;
+
+  margin-top: var(--defaultPadding);
+
+  border-top: 2px solid var(--backgroundColor);
+  padding-top: var(--defaultPadding);
+  color: antiquewhite;
+
+  width: 100%;
+}
+
+@media (max-width: 756px) {
+  .filterBar {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .addBtn {
+    margin: 10px 15px;
+  }
+
+  .searchBox {
+    width: 150px;
+  }
+}
+
+@media (max-width: 960px) {
+  .filterBar {
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+}

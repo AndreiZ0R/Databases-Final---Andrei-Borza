@@ -1,0 +1,239 @@
+@import url("../App.css");
+
+.page-main {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formCard {
+  height: 94%;
+  width: 40%;
+  background-color: var(--backgroundColor);
+  border-radius: var(--defaultBorderRadius);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.filterRow {
+  width: 100%;
+  height: 15%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px var(--defaultPadding);
+
+  border-bottom: 2px solid var(--onBackgroundColor);
+}
+
+.formRow {
+  width: 100%;
+  height: 85%;
+
+  padding: var(--defaultPadding);
+  padding-top: 0px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.filterBtn {
+  font-family: var(--jetbrainsFont);
+  letter-spacing: 0.1rem;
+  background-color: var(--backgroundColor);
+  border-radius: var(--extraSmallBorderRadius);
+  padding: var(--bulmaPadding);
+
+  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+
+.filterBtn:hover {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+.inputWrapper {
+  margin-bottom: var(--defaultPadding);
+  margin-top: 5px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.inputWrapper label {
+  margin-bottom: var(--extraSmallPadding);
+  font-family: var(--jetbrainsFont);
+  color: var(--primaryColor);
+  letter-spacing: 0.15rem;
+  color: var(--primaryColor);
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: var(--extraSmallPadding);
+  border-radius: var(--smallBorderRadius);
+  outline: none;
+  background-color: var(--onBackgroundColor);
+  border: 2px solid var(--onBackgroundColor);
+  color: var(--primaryColor);
+  font-family: var(--jetbrainsFont);
+
+  transition: all 200ms ease-in-out;
+}
+
+.inputWrapper input:focus {
+  border: 2px solid var(--primaryColor);
+}
+
+.inputWrapper select {
+  width: 100%;
+  padding: var(--extraSmallPadding);
+  border-radius: var(--smallBorderRadius);
+  outline: none;
+  background-color: var(--onBackgroundColor);
+  border: 2px solid var(--onBackgroundColor);
+  color: var(--primaryColor);
+  font-family: var(--jetbrainsFont);
+
+  transition: all 200ms ease-in-out;
+}
+
+.inputWrapper select:focus {
+  border: 2px solid var(--primaryColor);
+  border-radius: var(--smallBorderRadius) var(--smallBorderRadius) 0px 0px;
+}
+
+.inputWrapper option {
+  outline: none;
+  padding: var(--extraSmallPadding);
+  border: 2px solid var(--primaryColor);
+}
+
+.inputWrapper option:hover {
+  background-color: var(--onBackgroundColor);
+}
+
+.expanded {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.goBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: var(--defaultPadding);
+
+  padding: var(--bulmaPadding);
+  background-color: var(--backgroundColor);
+  border: 2px solid var(--backgroundColor);
+  color: var(--primaryColor);
+  border-radius: var(--extraSmallBorderRadius);
+
+  font-family: var(--jetbrainsFont);
+  cursor: pointer;
+
+  transition: all 200ms ease-in;
+}
+
+.goBack:hover {
+  background-color: var(--primaryColor);
+  border: 2px solid var(--backgroundColor);
+  color: var(--backgroundColor);
+}
+
+.submitBtn {
+  font-family: var(--jetbrainsFont);
+  letter-spacing: 0.1rem;
+  border-radius: var(--extraSmallBorderRadius);
+  padding: var(--bulmaPadding);
+  border: 2px solid var(--primaryColor);
+
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  color: var(--primaryColor);
+  background-color: var(--backgroundColor);
+}
+
+@media (max-width: 756px) {
+  .formCard {
+    height: 100vh;
+    width: 100vh;
+    border-radius: 0px;
+  }
+
+  .goBack {
+    display: none;
+  }
+
+  .filterRow {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 10%;
+  }
+
+  .formRow {
+    height: 90%;
+  }
+
+  .filterBtn {
+    margin: var(--smallPadding);
+    display: inline;
+  }
+
+  .formCard {
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 1000px) {
+  .filterRow {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    /* height: 10%; */
+  }
+  .filterBtn {
+    margin: var(--smallPadding);
+  }
+}

@@ -1,0 +1,58 @@
+@import url("../../App.css");
+
+table {
+  width: 100%;
+  text-align: left;
+  background-color: var(--onBackgroundColor);
+  /* position: relative; */
+  font-family: var(--jetbrainsFont);
+}
+
+th,
+td {
+  padding: var(--smallPadding);
+}
+
+thead th {
+  color: white;
+  /* position: sticky; */
+  /* top: 0px; */
+  background-color: var(--backgroundColor);
+}
+
+td {
+  border: 1px solid var(--onBackgroundColor);
+  color: var(--primaryColor);
+}
+
+tr:hover {
+  background-color: var(--tableRowHoverColor);
+}
+
+tr:hover td {
+  color: black;
+}
+
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  transition: all 250ms linear;
+  user-select: none;
+}
+
+.account-number {
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 756px) {
+  td {
+    border: 1px solid var(--backgroundColor);
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+}

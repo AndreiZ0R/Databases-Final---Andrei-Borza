@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=JetBrains+Mono:wght@100;400;700&display=swap");
+@import url("https://fonts.google.com/specimen/Nunito");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  font-family: var(--jetbrainsFont);
+}
+
+::selection {
+  background-color: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+:root {
+  --jetbrainsFont: "Jetbrains Mono";
+  --nunitoFont: "Nunito";
+
+  --backgroundColor: #212534;
+  --onBackgroundColor: #191c29;
+
+  --defaultBorderRadius: 20px;
+  --smallBorderRadius: 10px;
+  --extraSmallBorderRadius: 5px;
+
+  --extraBigPadding: 55px;
+  --bigPadding: 40px;
+  --defaultPadding: 25px;
+  --smallPadding: 15px;
+  --extraSmallPadding: 10px;
+
+  --primaryColor: #e52165;
+  --onPrimaryColor: #0d1137;
+
+  --tableRowHoverColor: #6b7b8c;
+  --bulmaPadding: 7px 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+table {
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* * {
+  border: 1px solid green;
+} */
